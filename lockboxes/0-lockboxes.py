@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for unlocking lockboxes."""
 
+
 def canUnlockAll(boxes):
     """
     Determines if all boxes can be unlocked.
