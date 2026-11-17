@@ -46,6 +46,11 @@ def main():
     except KeyboardInterrupt:
         print_stats(total_size, counts)
         raise
+    else:
+        # Input ended normally (EOF): print the final stats, unless the
+        # last batch of 10 just printed them.
+        if line_count % 10 != 0 or line_count == 0:
+            print_stats(total_size, counts)
 
 
 if __name__ == "__main__":
