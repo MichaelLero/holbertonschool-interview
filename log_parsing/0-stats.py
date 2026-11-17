@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Log parsing script: reads stdin and prints metrics every 10 lines
-and on keyboard interruption."""
+"""Log parsing script: reads stdin line by line and prints metrics
+every 10 lines and on keyboard interruption."""
 import re
 import sys
 
@@ -12,7 +12,7 @@ STATUS_CODES = ("200", "301", "400", "401", "403", "404", "405", "500")
 
 
 def print_stats(total_size, counts):
-    """Prints the total file size and the count for each status code.
+    """Prints the total file size and the number of lines per status code.
 
     Args:
         total_size (int): Sum of all file sizes so far.
